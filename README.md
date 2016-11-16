@@ -21,9 +21,8 @@ Takes a few hours to train on a P2 instance on AWS and image generation takes a 
   * numpy 1.11 
 
 ## Instructions for Processing
-1. Install requirements 
-2. Go to the project root (there is a pretrained model in the /data directory)
-3. Run:
+1. Go to the project root (there is a pretrained model in the /data directory)
+2. Run:
 ```
 $ python style.py --input=path_to_image.jpg --output=your_output_file.jpg
 ```
