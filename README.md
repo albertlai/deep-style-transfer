@@ -1,5 +1,5 @@
 # Deep Style Transfer
-Tensorflow implementation of the fast feed-forward neural style transfer algo by Johnson et al
+Tensorflow implementation of the fast feed-forward neural style transfer network by Johnson et al.
 
 Here is an example of styling a photo of San Francisco with Van Gogh's Starry Night
 <img src='https://github.com/albertlai/deep-style-transfer/raw/master/data/sf.jpg' height=256/>
@@ -12,7 +12,7 @@ off of [A Neural Algorithm of Artistic Style](https://arxiv.org/abs/1508.06576) 
 This implementation uses [Instance Norm](https://arxiv.org/abs/1607.08022) described by Ulyanov et al and 
 [Resize-Convolution](http://distill.pub/2016/deconv-checkerboard/) from Odena et al.
 
-Takes a few hours to train on a P2 instance on AWS and image generation takes a few seconds on a Macbook Pro. Dataset was from MS COCO and uses the VGG19 network for texture and style loss
+Takes a few hours to train on a P2 instance on AWS and image generation takes a few seconds on a Macbook Pro. Training image dataset was from MS COCO validation set and uses the VGG19 network for texture and style loss
 
 ## Requirements
 1. Tensorflow 0.10
@@ -20,5 +20,18 @@ Takes a few hours to train on a P2 instance on AWS and image generation takes a 
 ..* scikit-image
 ..* numpy 1.11 
 
-## Instructions
-TODO
+## Instructions for Processing
+1. Install requirements 
+2. Go to the project root (there is a pretrained model in the /data directory)
+3. Run:
+```
+$ python style.py --input=path_to_image.jpg --output=your_output_file.jpg
+```
+## Intructions for Training
+1. Download [VGG19 weights](https://mega.nz/#!xZ8glS6J!MAnE91ND_WyfZ_8mvkuSa2YcA7q-1ehfSm-Q1fxOvvs)
+2. Download [MS COCO dataset](http://mscoco.org/dataset/#overview) - the training script defaults to look for images in a directory named input_images
+3. Run:
+```
+$ python train.py --data_dir=/path/to/ms_coco --texture=path/to/source_image.jpg
+```
+
