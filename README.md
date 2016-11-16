@@ -16,9 +16,9 @@ Takes a few hours to train on a P2 instance on AWS and image generation takes a 
 
 ## Requirements
 1. Tensorflow 0.10
-2. Pip install
-..* scikit-image
-..* numpy 1.11 
+2. pip install:
+  * scikit-image
+  * numpy 1.11 
 
 ## Instructions for Processing
 1. Install requirements 
