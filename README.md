@@ -19,3 +19,6 @@ Takes a few hours to train on a P2 instance on AWS and image generation takes a 
 2. Pip install
 ..* scikit-image
 ..* numpy 1.11 
+
+## Instructions
+TODO
