@@ -4,7 +4,6 @@ import codecs
 import json
 import logging
 import os
-import psutil
 import shutil
 import sys
 import time
@@ -271,9 +270,6 @@ def main():
             json.dump(result, f, indent=2, sort_keys=True)
         logging.info('Done!')
 
-def get_mem_usage():                                                                                                                               
-    process = psutil.Process(os.getpid())                                                                                                          
-    return process.memory_info() 
 
 def save_status(epoch, status_file, ppl):
     status = {}
