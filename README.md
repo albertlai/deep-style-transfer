@@ -28,7 +28,7 @@ Takes a few hours to train on a P2 instance on AWS and image generation takes a 
 $ python style.py --input=path_to_image.jpg --output=your_output_file.jpg
 ```
 ## Intructions for Training
-1. Download [VGG19 weights](https://mega.nz/#!xZ8glS6J!MAnE91ND_WyfZ_8mvkuSa2YcA7q-1ehfSm-Q1fxOvvs)
+1. Download [VGG19 weights](https://mega.nz/#!xZ8glS6J!MAnE91ND_WyfZ_8mvkuSa2YcA7q-1ehfSm-Q1fxOvvs) as vgg19.npy
 2. Download [MS COCO dataset](http://mscoco.org/dataset/#overview) - the training script defaults to look for images in a directory named input_images
 3. Run:
 ```
