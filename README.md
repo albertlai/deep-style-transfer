@@ -28,7 +28,7 @@ $ python style.py --input=path_to_image.jpg --output=your_output_file.jpg
 ```
 ## Intructions for Training
 1. Download [VGG19 weights](https://mega.nz/#!xZ8glS6J!MAnE91ND_WyfZ_8mvkuSa2YcA7q-1ehfSm-Q1fxOvvs) as vgg19.npy
-2. Download [MS COCO dataset](http://mscoco.org/dataset/#overview) - the training script defaults to look for images in a directory named input_images
+2. Download [MS COCO validation dataset](http://mscoco.org/dataset/#download) - the training script defaults to look for images in a directory named input_images, though you can add whatever directory you want as a command line argument
 3. Run:
 ```
 $ python train.py --data_dir=/path/to/ms_coco --texture=path/to/source_image.jpg
