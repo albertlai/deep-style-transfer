@@ -17,21 +17,21 @@ def load_image(path, image_h, image_w, zoom=False):
         img = skimage.color.gray2rgb(img)
     # we crop image from center
     ratio = float(image_h) / image_w
-    height = img.shape[0]
-    width = img.shape[1]
+    height = int(img.shape[0])
+    width = int(img.shape[1])
     yy = 0
     xx = 0
     if height > width * ratio: #too tall
-        yy = int(height - width * ratio) / 2
+        yy = int(height - width * ratio) // 2
         height = int(width * ratio)
     else: # too wide
-        xx = int(width - height / ratio) / 2
+        xx = int(width - height / ratio) // 2
         width = int(height / ratio)
     if zoom:
-        yy += height / 6
-        xx += height / 6
-        height = height * 2/ 3
-        width = width * 2 / 3
+        yy += int(height / 6)
+        xx += int(height / 6)
+        height = int(height * 2/ 3)
+        width = int(width * 2 / 3)
     crop_img = img[yy: yy + height, xx: xx + width]
     # resize 
     resized_img = skimage.transform.resize(crop_img, (image_h, image_w), preserve_range=True)

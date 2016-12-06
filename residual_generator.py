@@ -59,7 +59,7 @@ class ResidualGenerator:
         """ resize the image then run a conv block on it """        
         with tf.variable_scope(name):
             _, h, w, _ = bottom.get_shape().as_list()
-            resized = tf.image.resize_images(bottom, h*2, w*2, method=tf.image.ResizeMethod.NEAREST_NEIGHBOR)
+            resized = tf.image.resize_images(bottom, [h*2, w*2], method=tf.image.ResizeMethod.NEAREST_NEIGHBOR)
             return self.conv_block(resized, n, S, 1, name)
 
     def get_conv_filter(self, n, C, S, name):

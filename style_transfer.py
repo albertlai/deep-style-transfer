@@ -82,7 +82,7 @@ class StyleTransfer:
         start_time = time.time()
         image_skip = 1 if epoch_size < 5 else epoch_size / 5
         summary_skip = 1 if epoch_size < 25 else epoch_size / 25
-        for step in xrange(epoch_size):
+        for step in range(epoch_size):
             if self.model_name == MULTISCALE:
                 feed = self.add_noise_to_feed({})
             else:

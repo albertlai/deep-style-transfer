@@ -19,7 +19,7 @@ import style_transfer
 from datetime import datetime
 
 TF_VERSION = int(tf.__version__.split('.')[1])
-print "Tensorflow version %d" % TF_VERSION 
+print("Tensorflow version %d" % TF_VERSION)
 
 tf.app.flags.DEFINE_integer('export_version', 1, 'version number of the model.')
 FLAGS = tf.app.flags.FLAGS

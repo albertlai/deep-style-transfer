@@ -54,7 +54,7 @@ class BatchGenerator:
             self.logging.info("file index %d" % n)
         else:
             print("file index %d" % n)
-        for b in xrange(self.max_batches):
+        for b in range(self.max_batches):
             if is_new:
                 arr = np.zeros((batch_size, image_h, image_w, 3))
                 batches.append(arr)
