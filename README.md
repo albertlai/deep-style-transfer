@@ -26,7 +26,7 @@ Takes a few hours to train on a P2 instance on AWS and image generation takes a 
 ```
 $ python style.py --input=path_to_image.jpg --output=your_output_file.jpg
 ```
-3. The style.py script defaults to a pretrained model based off starry.jpg - if you wish to try a different style you will have to train your own in the next section
+Note: The style.py script defaults to a pretrained model based off starry.jpg - if you wish to try a different style you will have to train your own in the next section
 
 ## Intructions for Training
 1. Download [VGG19 weights](https://mega.nz/#!xZ8glS6J!MAnE91ND_WyfZ_8mvkuSa2YcA7q-1ehfSm-Q1fxOvvs) as vgg19.npy
