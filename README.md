@@ -15,6 +15,7 @@ This implementation uses [Instance Norm](https://arxiv.org/abs/1607.08022) descr
 Takes a few hours to train on a P2 instance on AWS and image generation takes a few seconds on a Macbook Pro. Training image dataset was from MS COCO validation set and uses the VGG19 network for texture and style loss.
 
 If you don't want to install tensorflow and all that, you can try out image styling (that uses this code) on the Android App
+
 <a href='https://play.google.com/store/apps/details?id=com.shiftingbit.swapstyle&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' height='75px' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
 
 ## Requirements
