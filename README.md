@@ -19,7 +19,7 @@ If you don't want to install tensorflow and deal with training your own models, 
 <a href='https://play.google.com/store/apps/details?id=com.shiftingbit.swapstyle&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' height='75px' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
 
 ## Requirements
-1. Tensorflow 0.10
+1. Tensorflow 0.12
 2. pip install:
   * scikit-image
   * numpy 1.11 
