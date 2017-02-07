@@ -27,7 +27,7 @@ class BatchGenerator:
             print("setting up batches %d at a time starting from %d" % (self.max_batches, batch_index))
         self.image_h = image_h
         self.image_w = image_w
-        self.logging = logging
+        self.logging = logging        
         file_list = os.listdir(image_dir) if image_dir != DUMMY else []
         self.last_load = batch_index if not valid else len(file_list)-1       
         self.index = 0
@@ -50,10 +50,6 @@ class BatchGenerator:
         image_w = self.image_w
         file_list = os.listdir(image_dir) if image_dir != DUMMY else []
         n = self.last_load 
-        if self.logging:
-            self.logging.info("file index %d" % n)
-        else:
-            print("file index %d" % n)
         for b in range(self.max_batches):
             if is_new:
                 arr = np.zeros((batch_size, image_h, image_w, 3))

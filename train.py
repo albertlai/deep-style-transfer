@@ -142,6 +142,7 @@ def main():
             best_valid_loss = result['best_valid_loss']
             args.batch_index = result['batch_index']
             args.tv = result['tv']
+            args.generator=result['generator']
     else:
         result = {}
         result['model_name'] = args.model_name
@@ -154,7 +155,8 @@ def main():
         result['num_epochs'] = args.num_epochs    
         result['epoch_size'] = args.epoch_size
         result['tv'] = args.tv
-
+        result['generator'] = args.generator
+        
     logging.info("Training style: %s with texture loss weight %d" % (args.texture, args.texture_weight))
 
 
