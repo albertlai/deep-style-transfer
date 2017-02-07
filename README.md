@@ -12,10 +12,14 @@ off of [A Neural Algorithm of Artistic Style](https://arxiv.org/abs/1508.06576) 
 This implementation uses [Instance Norm](https://arxiv.org/abs/1607.08022) described by Ulyanov et al and 
 [Resize-Convolution](http://distill.pub/2016/deconv-checkerboard/) from Odena et al.
 
-Takes a few hours to train on a P2 instance on AWS and image generation takes a few seconds on a Macbook Pro. Training image dataset was from MS COCO validation set and uses the VGG19 network for texture and style loss
+Takes a few hours to train on a P2 instance on AWS and image generation takes a few seconds on a Macbook Pro. Training image dataset was from MS COCO validation set and uses the VGG19 network for texture and style loss.
+
+If you don't want to install tensorflow and deal with training your own models, try the Android app which has other styles trained using this code.
+
+<a href='https://play.google.com/store/apps/details?id=com.shiftingbit.swapstyle&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' height='75px' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
 
 ## Requirements
-1. Tensorflow 0.10
+1. Tensorflow 0.12
 2. pip install:
   * scikit-image
   * numpy 1.11 
@@ -26,6 +30,8 @@ Takes a few hours to train on a P2 instance on AWS and image generation takes a 
 ```
 $ python style.py --input=path_to_image.jpg --output=your_output_file.jpg
 ```
+Note: The style.py script defaults to a pretrained model based off starry.jpg - if you wish to try a different style you will have to train your own in the next section
+
 ## Intructions for Training
 1. Download [VGG19 weights](https://mega.nz/#!xZ8glS6J!MAnE91ND_WyfZ_8mvkuSa2YcA7q-1ehfSm-Q1fxOvvs) as vgg19.npy
 2. Download [MS COCO validation dataset](http://mscoco.org/dataset/#download) - the training script defaults to look for images in a directory named input_images, though you can add whatever directory you want as a command line argument
