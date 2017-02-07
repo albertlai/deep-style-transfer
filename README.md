@@ -39,4 +39,8 @@ Note: The style.py script defaults to a pretrained model based off starry.jpg - 
 ```
 $ python train.py --data_dir=/path/to/ms_coco --texture=path/to/source_image.jpg
 ```
-
+## Instructions for Exporting
+When training, your model gets saved as a series of tensorflow checkpoints - the default directory for this is the named 'model.' We export these checkpoints to a .pb file for easy usage, using the freeze_graphs.py file copied from the tensorflow source repo. To run the export script run:
+``` 
+$ python export.py --input_dir=path_to/training_directory
+```
